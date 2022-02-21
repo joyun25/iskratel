@@ -1,0 +1,474 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ededed;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+header {
+  color: #fff;
+}
+
+.header_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #009ee0;
+}
+
+.header_top a {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 25px;
+}
+
+@media (max-width: 480px) {
+  .header_top a {
+    padding: 0 10px;
+  }
+}
+
+.header_logo img {
+  height: 48px;
+  padding: 8px 0 12px 10px;
+}
+
+.header_menu-pc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .header_menu-pc {
+    display: none;
+  }
+}
+
+.header_menu-pc li a {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.header_menu-pc li a:hover {
+  color: #e6e6e6;
+}
+
+.header_menu-mb {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header_menu-mb {
+    display: block;
+    font-size: 20px;
+  }
+}
+
+.header_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_buttons a {
+  border-left: 1px solid #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media (max-width: 900px) {
+  .header_buttons a {
+    border: none;
+  }
+}
+
+.header_buttons a:hover {
+  color: #e6e6e6;
+}
+
+.header_bottom {
+  height: 91px;
+  background: #004562;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .header_bottom {
+    display: none;
+  }
+}
+
+.header_contact {
+  position: absolute;
+  top: 32px;
+  right: 29px;
+  background: #ffa243;
+  text-transform: uppercase;
+  padding: 12px 9px;
+  font-size: 12px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.header_contact:hover {
+  background: #ff8910;
+}
+
+.banner {
+  background-image: url("https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 404px;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .banner {
+    height: 200px;
+    margin-bottom: 350px;
+  }
+}
+
+.banner_text {
+  position: absolute;
+  background: #fff;
+  left: 40px;
+  top: 2px;
+  height: 400px;
+  width: 450px;
+  color: #888;
+  padding: 30px;
+}
+
+@media (max-width: 900px) {
+  .banner_text {
+    left: 0;
+    top: 200px;
+    width: 100%;
+    text-align: center;
+    height: 350px;
+  }
+}
+
+.banner_text h2 {
+  font-size: 70px;
+  color: #ffa243;
+}
+
+@media (max-width: 900px) {
+  .banner_text h2 {
+    font-size: 40px;
+  }
+}
+
+.banner_text h3 {
+  font-size: 34px;
+}
+
+@media (max-width: 900px) {
+  .banner_text h3 {
+    font-size: 20px;
+  }
+}
+
+.banner_text p {
+  font-size: 18px;
+  padding: 30px 0;
+}
+
+.banner_text a {
+  text-transform: uppercase;
+  display: inline-block;
+  color: #009ee0;
+  border: 1px solid #009ee0;
+  padding: 12px 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.banner_text a:hover {
+  background: #009ee0;
+  color: #fff;
+  border-color: #fff;
+}
+
+.products {
+  background: #fff;
+}
+
+.products ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .products ul {
+    padding: 50px 0 30px 0;
+  }
+}
+
+.card a {
+  background: #009ee0;
+  width: calc((100vw - 120px) / 4);
+  padding: 30px;
+  min-height: 190px;
+}
+
+@media (max-width: 900px) {
+  .card a {
+    width: calc((100vw - 120px) / 2);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card a {
+    width: 100%;
+  }
+}
+
+.card a h2 {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.news {
+  padding: 50px 0;
+  min-height: 235px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #888;
+}
+
+@media (max-width: 900px) {
+  .news {
+    padding: 20px 0;
+    display: block;
+  }
+}
+
+.news_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .news_list {
+    display: block;
+  }
+}
+
+.news_list li {
+  width: calc(100vw / 5);
+  padding: 20px;
+  border-right: 1px solid #fff;
+}
+
+@media (max-width: 900px) {
+  .news_list li {
+    width: calc(100vw / 3);
+  }
+}
+
+@media (max-width: 480px) {
+  .news_list li {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.news_tag {
+  color: #ffa243;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.news_date {
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.news_more {
+  width: calc(100vw / 5);
+  color: #009ee0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .news_more {
+    width: calc(100vw / 3);
+  }
+}
+
+@media (max-width: 480px) {
+  .news_more {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.companies {
+  height: 180px;
+  background: #fff;
+}
+
+footer {
+  background: #004562;
+  min-height: 180px;
+  color: #fff;
+  position: relative;
+  padding: 30px;
+}
+
+footer a {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+footer a:hover {
+  color: #ffa243;
+}
+
+.footer_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #ccc;
+  line-height: 40px;
+}
+
+@media (max-width: 480px) {
+  .footer_list {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_list > li {
+    margin-bottom: 20px;
+  }
+}
+
+.footer_contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+}
+
+.footer_contact ul a {
+  margin-right: 20px;
+}
+
+.footer_logo img {
+  height: 45px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+  .footer_logo img {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pc-only {
+    display: none;
+  }
+}
+/*# sourceMappingURL=all.css.map */

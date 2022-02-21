@@ -1,0 +1,336 @@
+// Variables
+$lightBlue: #009ee0; // header, cards
+$blackBlue: #004562; // header
+$linkInBlue: #006097; // linkIn
+$darkBlue: #004562; // footer
+$lightGray: #ededed; // body bg
+$orange: #ffa243; // contact us bg
+
+// CSS Reset
+@import 'reset';
+
+// Mixins
+@mixin pad {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+// My Reset
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $lightGray;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+// My CSS
+header {
+    color: #fff;
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    background: $lightBlue;
+    a {
+        height: 48px;
+        line-height: 48px;
+        padding: 0 25px;
+        @include mobile {
+            padding: 0 10px;
+        }
+    }
+}
+
+.header_logo {
+    img {
+        height: 48px;
+        padding: 8px 0 12px 10px;
+    }
+}
+
+.header_menu-pc {
+    display: flex;
+    @include pad {
+        display: none;
+    }
+    li a {
+        transition: all .5s;
+        &:hover {
+            color: darken(#fff, 10%);
+        }
+    }
+}
+
+.header_menu-mb {
+    display: none;
+    @include pad {
+        display: block;
+        font-size: 20px;
+    }
+}
+
+.header_buttons {
+    display: flex;
+    a {
+        border-left: 1px solid #fff;
+        transition: all .5s;
+        @include pad {
+            border: none;
+        }
+        &:hover {
+            color: darken(#fff, 10%);
+        }
+    }
+}
+
+.header_bottom {
+    height: 91px;
+    background: $blackBlue;
+    position: relative;
+    @include pad {
+        display: none;
+    }
+}
+
+.header_contact {
+    position: absolute;
+    top: 32px;
+    right: 29px;
+    background: $orange;
+    text-transform: uppercase;
+    padding: 12px 9px;
+    font-size: 12px;
+    transition: all .5s;
+    &:hover {
+        background: darken($orange, 10%);
+    }
+}
+
+.banner {
+    background-image: url('https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 404px;
+    position: relative;
+    @include pad {
+        height: 200px;
+        margin-bottom: 350px;
+    }
+}
+
+.banner_text {
+    position: absolute;
+    background: #fff;
+    left: 40px;
+    top: 2px;
+    height: 400px;
+    width: 450px;
+    color: #888;
+    padding: 30px;
+    @include pad {
+        left: 0;
+        top: 200px;
+        width: 100%;
+        text-align: center;
+        height: 350px;
+    }
+    h2 {
+        font-size: 70px;
+        color: $orange;
+        @include pad {
+            font-size: 40px;
+        }
+    }
+    h3 {
+        font-size: 34px;
+        @include pad {
+            font-size: 20px;
+        }
+    }
+    p {
+        font-size: 18px;
+        padding: 30px 0;
+    }
+    a {
+        text-transform: uppercase;
+        display: inline-block;
+        color: $lightBlue;
+        border: 1px solid $lightBlue;
+        padding: 12px 30px;
+        transition: all .5s;
+        &:hover {
+            background: $lightBlue;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
+.products {
+    background: #fff;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 50px 0;
+        color: #fff;
+        text-align: center;
+        @include pad {
+            padding: 50px 0 30px 0;
+        }
+    }
+}
+
+.card a{
+    background: $lightBlue;
+    width: calc((100vw - 120px) / 4);
+    padding: 30px;
+    min-height: 190px;
+    @include pad {
+        width: calc((100vw - 120px) / 2);
+        margin-bottom: 20px;
+    }
+    @include mobile {
+        width: 100%;
+    }
+    h2 {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+}
+
+.news {
+    padding: 50px 0;
+    min-height: 235px;
+    display: flex;
+    color: #888;
+    @include pad {
+        padding: 20px 0;
+        display: block;
+    }
+}
+
+.news_list {
+    display: flex;
+    @include pad {
+        display: block;
+    }
+    li {
+        width: calc(100vw / 5);
+        padding: 20px;
+        border-right: 1px solid #fff;
+        @include pad {
+            width: calc(100vw / 3);
+        }
+        @include mobile {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
+
+.news_tag {
+    color: $orange;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.news_date {
+    font-style: italic;
+    padding: 20px 0;
+}
+
+.news_more {
+    width: calc(100vw / 5);
+    color: $lightBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include pad {
+        width: calc(100vw / 3);
+    }
+    @include mobile {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.companies {
+    height: 180px;
+    background: #fff;
+}
+
+footer {
+    background: $darkBlue;
+    min-height: 180px;
+    color: #fff;
+    position: relative;
+    padding: 30px;
+    a {
+        transition: all .5s;
+    }
+    a:hover {
+        color: $orange;
+    }
+}
+
+.footer_list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ccc;
+    line-height: 40px;
+    @include mobile {
+        display: block;
+    }
+    > li {
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.footer_contact {
+    ul {
+        display: flex;
+        color: #fff;
+        a {
+            margin-right: 20px;
+        }
+    }
+}
+
+.footer_logo img{
+    height: 45px;
+    margin-bottom: 30px;
+    @include mobile {
+        margin-bottom: 5px;
+    }
+}
+
+.pc-only {
+    @include pad {
+        display: none;
+    }
+}
