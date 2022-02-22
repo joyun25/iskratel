@@ -39,6 +39,7 @@ a {
 
 img {
     display: block;
+    width: 100%;
 }
 
 // My CSS
@@ -82,9 +83,23 @@ header {
 
 .header_menu-mb {
     display: none;
+    position: relative;
     @include pad {
         display: block;
+    }
+    > a {
         font-size: 20px;
+    }
+    ul {
+        position: absolute;
+        z-index: 2;
+        background: $lightBlue;
+        width: 100vw;
+        text-align: center;
+        display: none;
+    }
+    li {
+        border-top: 1px solid #fff;
     }
 }
 
@@ -111,6 +126,16 @@ header {
     }
 }
 
+.header_submenu-pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    li {
+        padding: 0 20px;
+    }
+}
+
 .header_contact {
     position: absolute;
     top: 32px;
@@ -126,16 +151,60 @@ header {
 }
 
 .banner {
+    // background-image: url('https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg');
+    // background-position: top center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    height: 404px;
+    position: relative;
+    @include pad {
+        height: 300px;
+        margin-bottom: 300px;
+    }
+    @include mobile {
+        height: 200px;
+        margin-bottom: 350px;
+    }
+}
+
+.swiper {
+    width: 100vw;
+    height: 404px;
+    @include pad {
+        height: 300px;
+        margin-bottom: 300px;
+    }
+    @include mobile {
+        height: 200px;
+        margin-bottom: 350px;
+    }
+}
+
+.bg1 {
+    width: 100vw;
+    height: 100%;
     background-image: url('https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 404px;
-    position: relative;
-    @include pad {
-        height: 200px;
-        margin-bottom: 350px;
-    }
+}
+
+.bg2 {
+    width: 100vw;
+    height: 100%;
+    background-image: url('https://www.iskratel.com/en/imagelib/full/default/Events/Vienna-2x1.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg3 {
+    width: 100vw;
+    height: 100%;
+    background-image: url('https://www.iskratel.com/en/imagelib/full/default/Documents/banners/5G-whitepaper-cut.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .banner_text {
@@ -143,15 +212,20 @@ header {
     background: #fff;
     left: 40px;
     top: 2px;
+    z-index: 3;
     height: 400px;
     width: 450px;
     color: #888;
     padding: 30px;
     @include pad {
         left: 0;
-        top: 200px;
+        top: 300px;
         width: 100%;
         text-align: center;
+        height: 300px;
+    }
+    @include mobile {
+        top: 200px;
         height: 350px;
     }
     h2 {

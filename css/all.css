@@ -69,6 +69,7 @@ a {
 
 img {
   display: block;
+  width: 100%;
 }
 
 header {
@@ -125,13 +126,30 @@ header {
 
 .header_menu-mb {
   display: none;
+  position: relative;
 }
 
 @media (max-width: 900px) {
   .header_menu-mb {
     display: block;
-    font-size: 20px;
   }
+}
+
+.header_menu-mb > a {
+  font-size: 20px;
+}
+
+.header_menu-mb ul {
+  position: absolute;
+  z-index: 2;
+  background: #009ee0;
+  width: 100vw;
+  text-align: center;
+  display: none;
+}
+
+.header_menu-mb li {
+  border-top: 1px solid #fff;
 }
 
 .header_buttons {
@@ -168,6 +186,23 @@ header {
   }
 }
 
+.header_submenu-pc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header_submenu-pc li {
+  padding: 0 20px;
+}
+
 .header_contact {
   position: absolute;
   top: 32px;
@@ -185,19 +220,68 @@ header {
 }
 
 .banner {
-  background-image: url("https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 404px;
   position: relative;
 }
 
 @media (max-width: 900px) {
   .banner {
+    height: 300px;
+    margin-bottom: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
     height: 200px;
     margin-bottom: 350px;
   }
+}
+
+.swiper {
+  width: 100vw;
+  height: 404px;
+}
+
+@media (max-width: 900px) {
+  .swiper {
+    height: 300px;
+    margin-bottom: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 200px;
+    margin-bottom: 350px;
+  }
+}
+
+.bg1 {
+  width: 100vw;
+  height: 100%;
+  background-image: url("https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2 {
+  width: 100vw;
+  height: 100%;
+  background-image: url("https://www.iskratel.com/en/imagelib/full/default/Events/Vienna-2x1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg3 {
+  width: 100vw;
+  height: 100%;
+  background-image: url("https://www.iskratel.com/en/imagelib/full/default/Documents/banners/5G-whitepaper-cut.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .banner_text {
@@ -205,6 +289,7 @@ header {
   background: #fff;
   left: 40px;
   top: 2px;
+  z-index: 3;
   height: 400px;
   width: 450px;
   color: #888;
@@ -214,9 +299,16 @@ header {
 @media (max-width: 900px) {
   .banner_text {
     left: 0;
-    top: 200px;
+    top: 300px;
     width: 100%;
     text-align: center;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner_text {
+    top: 200px;
     height: 350px;
   }
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="css/all.css">
     <title>Iskratel</title>
 </head>
@@ -11,7 +13,16 @@
     <div class="wrap">
         <header>
             <div class="header_top">
-                <a class="header_menu-mb" href="#"><i class="fa-solid fa-bars"></i></a>
+                <div class="header_menu-mb">
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <ul>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Solutions</a></li>
+                    </ul>
+                </div>
                 <h1>
                     <a class="header_logo" href="index.html">
                         <img src="https://www.iskratel.com/en/files/default/Logos/2021/Logo-Iskratel-SnT-wide.svg" alt="Iskratel">
@@ -52,9 +63,48 @@
             </div>
             <div class="header_bottom">
                 <a href="#" class="header_contact">contact us</a>
+                <ul class="header_submenu-pc">
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                    <li><a href="#">item</a></li>
+                </ul>
             </div>
         </header>
         <div class="banner">
+
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="bg1"></div>
+                        <!-- <img src="https://www.iskratel.com/en/imagelib/full/default/Industries/Banners/banner-iskratel.jpg" alt=""> -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg2"></div>
+                        <!-- <img src="https://www.iskratel.com/en/imagelib/full/default/Events/Vienna-2x1.jpg" alt=""> -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg3"></div>
+                        <!-- <img src="https://www.iskratel.com/en/imagelib/full/default/Documents/banners/5G-whitepaper-cut.jpg" alt=""> -->
+                    </div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+            
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+
             <div class="banner_text">
                 <h2>Your Link</h2>
                 <h3>Lorem ipsum dolor consectetur</h3>
@@ -158,5 +208,8 @@
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/12f7c380ae.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
 </body>
 </html>
